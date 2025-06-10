@@ -109,11 +109,11 @@ async def sudo_command(bot: Client, message: Message):
 keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🇮🇳ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ🇮🇳" ,url=f"https://t.me/saini_sahab19") ],
+                    InlineKeyboardButton("🇮🇳ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ🇮🇳" ,url=f"https://t.me/saini_sahab_19") ],
                     [
-                    InlineKeyboardButton("🔔ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔔" ,url="https://t.me/saini_sahab19") ],
+                    InlineKeyboardButton("🔔ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔔" ,url="https://t.me/nothing_saini") ],
                     [
-                    InlineKeyboardButton("🦋ғᴏʟʟᴏᴡ ᴜs🦋" ,url="https://t.me/saini_sahab19")                              
+                    InlineKeyboardButton("🦋ғᴏʟʟᴏᴡ ᴜs🦋" ,url="https://t.me/nothing_saini")                              
                 ],           
             ]
       )
@@ -441,10 +441,7 @@ async def help_command(client: Client, msg: Message):
 # Upload command handler
 @bot.on_message(filters.command(["saini"]))
 async def upload(bot: Client, m: Message):
-    if not is_authorized(m.chat.id):
-        await m.reply_text("**🚫You are not authorized to use this bot.contact:- @Saini_sahab_19 **")
-        return
-
+    
     editable = await m.reply_text(f"⚡𝗦𝗘𝗡𝗗 𝗧𝗫𝗧 𝗙𝗜𝗟𝗘⚡")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
@@ -521,7 +518,7 @@ async def upload(bot: Client, m: Message):
     
     
 
-    await editable.edit('𝗡𝗼𝘄 𝗘𝗻𝘁𝗲𝗿 𝗔 𝗖𝗮𝗽𝘁𝗶𝗼𝗻 𝗧𝗼 𝗔𝗱𝗱 𝗖𝗮𝗽𝘁𝗶𝗼𝗻 𝗢𝗻 𝗬𝗼𝘂𝗿 𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱 𝗙𝗶𝗹𝗲\n\n𝗘𝗴 » <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>')
+    await editable.edit('𝗡𝗼𝘄 𝗘𝗻𝘁𝗲𝗿 𝗔 𝗖𝗮𝗽𝘁𝗶𝗼𝗻 𝗧𝗼 𝗔𝗱𝗱 𝗖𝗮𝗽𝘁𝗶𝗼𝗻 𝗢𝗻 𝗬𝗼𝘂𝗿 𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱 𝗙𝗶𝗹𝗲\n\n𝗘𝗴 » <a href="https://t.me/nothing_saini">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>')
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -559,7 +556,7 @@ async def upload(bot: Client, m: Message):
         count = int(raw_text)
         
         await m.reply_text(
-           f"<pre><code>**🎯Target Batch :** `{b_name}`</code></pre>"
+           f"<pre>**🎯Target Batch :** **{b_name}**</pre>"
     )
     try:
         for i in range(count - 1, len(links)):
@@ -658,13 +655,13 @@ async def upload(bot: Client, m: Message):
 
             try:  
 
-                cc = f'<a href="https://t.me/saini_sahab19">**[🎬] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}</a>**\n\n<blockquote>**Video Title** ➤ {name1} ({res}) 𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 .mkv</blockquote>\n\n<blockquote>**📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}**</blockquote>\n\n<a href="https://t.me/saini_sahab19">**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤</a> <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>   **{raw_text3}**'
-                cpw = f'<a href="https://t.me/saini_sahab19">**[🎬] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}</a>**\n\n<blockquote>**Video 𝗧𝗶𝘁𝗹𝗲** ➤ {name1} ({res}) 𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 .mkv</blockquote>\n\n\n**🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__**Click Here to Watch Video**__</a>**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}</code></pre>**\n\n\n<a href="https://t.me/saini_sahab19">**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤ </a> <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>    **{raw_text3}**'
-                cyt = f'<a href="https://t.me/saini_sahab19">**[🎬] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}</a>**\n\n<blockquote>**Video Title** ➤ {name1} ({res}) 𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 .mp4</blockquote>\n\n\n**🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__**Click Here to Watch Video**__</a>**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}</code></pre>**\n\n\n<a href="https://t.me/saini_sahab19">**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤</a><a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>   **{raw_text3}**'
-                cpvod = f'<a href="https://t.me/saini_sahab19">**[🎬] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}</a>**\n\n<blockquote>**Video Title** ➤ {name1} ({res}) 𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 .mkv</blockquote>\n\n**🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__**Click Here to Watch Video**__</a>**\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}</code></pre>**\n\n\n<a href="https://t.me/saini_sahab19">**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤</a> <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>   **{raw_text3}**'
-                cimg = f'<a href="https://t.me/saini_sahab19">**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}</a>**\n\n<blockquote>**Image Title** ➤ {name1} 𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 .jpg</blockquote>\n\n<blockquote>**📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}**</blockquote>\n\n<a href="https://t.me/saini_sahab19"> **📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤</a> <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>  **{raw_text3}**'
-                cczip = f'<a href="https://t.me/saini_sahab19">**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}</a>**\n\n<blockquote>**Zip Title** ➤ {name1} 𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 .zip</blockquote>\n\n<blockquote>**📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}**</blockquote>\n\n<a href="https://t.me/saini_sahab19">**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤</a> <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>   **{raw_text3}**'
-                cc1 = f'<a href="https://t.me/saini_sahab19">**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}</a>**\n\n<blockquote>**Pdf Title** ➤ {name1} 𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 .pdf</blockquote>\n\n<blockquote>**📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}**</blockquote>\n\n<a href="https://t.me/saini_sahab19">**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤</a> <a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>   **{raw_text3}**'
+                cc = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}**\n\n<blockquote>**Video Title** ➤ {name1} ({res}) **{raw_text3}** .mkv</blockquote>\n\n<blockquote>**📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}**</blockquote>\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤  **{raw_text3}**'
+                cpw = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}**\n\n<blockquote>**Video 𝗧𝗶𝘁𝗹𝗲** ➤ {name1} ({res}) **{raw_text3}** .mkv</blockquote>\n\n\n**🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__**Click Here to Watch Video**__</a>**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤   **{raw_text3}**'
+                cyt = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}**\n\n<blockquote>**Video Title** ➤ {name1} ({res}) **{raw_text3}** .mp4</blockquote>\n\n\n**🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__**Click Here to Watch Video**__</a>**\n\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤   **{raw_text3}**'
+                cpvod = f'**[🎬] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}**\n\n<blockquote>**Video Title** ➤ {name1} ({res}) **{raw_text3}** .mkv</blockquote>\n\n**🔗𝗩𝗶𝗱𝗲𝗼 𝗨𝗿𝗹 ➤ <a href="{url}">__**Click Here to Watch Video**__</a>**\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}</code></pre>**\n\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤  **{raw_text3}**'
+                cimg = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}**\n\n<blockquote>**Image Title** ➤ {name1} **{raw_text3}** .jpg</blockquote>\n\n<blockquote>**📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}**</blockquote>\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤  **{raw_text3}**'
+                cczip = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}**\n\n<blockquote>**Zip Title** ➤ {name1} **{raw_text3}** .zip</blockquote>\n\n<blockquote>**📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}**</blockquote>\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤ **{raw_text3}**'
+                cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}**\n\n<blockquote>**Pdf Title** ➤ {name1} **{raw_text3}** .pdf</blockquote>\n\n<blockquote>**📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{b_name}**</blockquote>\n\n**📥 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆** ➤  **{raw_text3}**'
           
                 if "drive" in url:
                     try:
@@ -804,7 +801,7 @@ async def upload(bot: Client, m: Message):
     except Exception as e:
         await m.reply_text(e)
     #await m.reply_text('<a href="https://t.me/saini_sahab19">**🥳𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗗𝗼𝗻𝗲🥳**')
-    await m.reply_text(f'<a href="https://t.me/saini_sahab19">✨𝗕𝗔𝗧𝗖𝗛 𝗦𝗨𝗠𝗠𝗔𝗥𝗬✨\n\n'
+    await m.reply_text(f'✨𝗕𝗔𝗧𝗖𝗛 𝗦𝗨𝗠𝗠𝗔𝗥𝗬✨\n\n'
                        f'▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n'
                        f'📛𝗜𝗻𝗱𝗲𝘅 𝗥𝗮𝗻𝗴𝗲 » ({raw_text} to {len(links)})\n'
                        f'📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲 » {b_name}\n\n'
@@ -813,9 +810,9 @@ async def upload(bot: Client, m: Message):
                        f'▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n'
                        f'🔹𝗩𝗶𝗱𝗲𝗼 » {video_count}\n🔹𝗣𝗱𝗳 » {pdf_count}\n🔹𝗜𝗺𝗴 » {img_count}\n🔹𝗭𝗶𝗽 » {zip_count}\n🔹𝗙𝗮𝗶𝗹𝗲𝗱 𝗨𝗿𝗹 » {failed_count}\n\n'
                        f'▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n'
-                       f'✅𝗦𝗧𝗔𝗧𝗨𝗦 » 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗘𝗗</a>')
-    await m.reply_text('📥𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤『<a href="https://t.me/saini_sahab19">𝙎𝘼𝙄𝙉𝙄 𝙎𝘼𝙃𝘼𝘽 </a>』')
-    await m.reply_text(f'<a href="https://t.me/saini_sahab19">『😏𝗥𝗲𝗮𝗰𝘁𝗶𝗼𝗻 𝗞𝗼𝗻 𝗗𝗲𝗴𝗮😏』</a>')                 
+                       f'✅𝗦𝗧𝗔𝗧𝗨𝗦 » **COMPLETED**\n'
+    await m.reply_text('📥𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗲𝗱 𝗕𝘆 ➤ **{raw_text3}**')
+    await m.reply_text(f"<pre>『😏𝗥𝗲𝗮𝗰𝘁𝗶𝗼𝗻 𝗞𝗼𝗻 𝗗𝗲𝗴𝗮😏』</pre>")                 
 
 bot.run()
 if __name__ == "__main__":
